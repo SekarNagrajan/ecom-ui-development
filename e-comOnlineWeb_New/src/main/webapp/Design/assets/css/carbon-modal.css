@@ -1,0 +1,551 @@
+/**
+ * Carbon Emissions modal — all rules scoped under .carbon-modal
+ * Primary teal: #0aa5c2
+ */
+.carbon-modal {
+    --carbon-teal: #0aa5c2;
+    --carbon-teal-dark: #088da6;
+    --carbon-teal-light: #e6f7fb;
+    --carbon-teal-border: #b8e8f2;
+    --carbon-text: #1e293b;
+    --carbon-text-muted: #64748b;
+    --carbon-border: #e2e8f0;
+    --carbon-surface: #f8fafc;
+    --carbon-success-bg: #ecfdf5;
+    --carbon-success-text: #059669;
+    --carbon-warning-bg: #fffbeb;
+    --carbon-warning-border: #fde68a;
+    --carbon-warning-text: #92400e;
+}
+
+
+
+[class*="schd_book_now_block"] .schd_book_now_top,
+[class*="schd_book_now_block"] .schd_carbon_booking_btn {
+    margin-bottom: 8px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+[class*="schd_book_now_block"] .schd_carbon_booking_btn {
+    margin-bottom: 0;
+}
+
+[class*="schd_book_now_block"] .booking_btn .book_now_btn {
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 100%;
+    min-width: 170px;
+    padding: 6px 18px;
+}
+
+[class*="schd_book_now_block"] .schd_book_now_meta {
+    margin-top: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+.carbon-modal.modal {
+    z-index: 1060;
+}
+
+.carbon-modal.modal.in,
+.carbon-modal.modal.show {
+    display: block !important;
+}
+
+.carbon-modal .modal-dialog {
+    max-width: 920px;
+    width: calc(100% - 2rem);
+}
+
+.carbon-modal .modal-content {
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+    overflow: hidden;
+}
+
+.carbon-modal .modal-header {
+    align-items: flex-start;
+   
+    border-bottom: 1px solid var(--carbon-border);
+    padding: 1.25rem 1.5rem;
+}
+
+.carbon-modal .carbon-modal__header-brand {
+    align-items: center;
+    display: flex;
+    gap: 0.875rem;
+    min-width: 0;
+}
+
+.carbon-modal .carbon-modal__icon-tile {
+    align-items: center;
+    background: var(--carbon-teal);
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-shrink: 0;
+    height: 44px;
+    justify-content: center;
+    width: 44px;
+}
+
+.carbon-modal .carbon-modal__icon-tile .fa {
+    font-size: 1.25rem;
+}
+
+.carbon-modal .carbon-modal__title {
+    color: var(--carbon-text);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.carbon-modal .carbon-modal__subtitle {
+    color: var(--carbon-text-muted);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0.2rem 0 0;
+}
+
+.carbon-modal .modal-header .close {
+    color: var(--carbon-text-muted);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    
+    opacity: 0.65;
+    padding: 0.25rem;
+    text-shadow: none;
+}
+
+.carbon-modal .modal-header .close:hover {
+    color: var(--carbon-text);
+    opacity: 1;
+}
+
+.carbon-modal .modal-body {
+    background: #fff;
+    max-height: calc(100vh - 7rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 1.25rem 1.5rem 1.5rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carbon-modal .modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.carbon-modal .modal-body::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+.carbon-modal .modal-body::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 8px;
+}
+
+.carbon-modal .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+.carbon-modal .carbon-modal__route-banner {
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--carbon-border);
+    border-radius: 10px;
+    color: var(--carbon-text);
+    display: flex;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    gap: 0.5rem;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    padding: 0.875rem 1rem;
+    text-transform: uppercase;
+}
+
+.carbon-modal .carbon-modal__route-banner .fa,
+.carbon-modal .carbon-metric-icon,
+.carbon-modal .carbon-calculated-badge,
+.carbon-modal .carbon-info-icon,
+.carbon-modal #schdCarbonModalCalculate .fa,
+.carbon-modal .carbon-modal__icon-tile {
+    display: none !important;
+}
+
+.carbon-modal .schd-carbon-form-panel {
+    background: #fff;
+    border: 1px solid var(--carbon-border);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    padding: 1rem 1.125rem;
+}
+
+.carbon-modal .carbon-metrics-row .carbon-metric {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 55%);
+    border: 1px solid #e8eef5;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.carbon-modal .carbon-metrics-row .carbon-metric:hover {
+    border-color: #c5e6f3;
+    box-shadow: 0 4px 14px rgba(0, 154, 206, 0.12);
+}
+
+.carbon-modal .schd-carbon-form-row {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+}
+
+.carbon-modal .schd-carbon-form-field {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.carbon-modal .schd-carbon-form-label {
+    color: var(--carbon-text-muted);
+    display: block;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+}
+
+.carbon-modal .schd-carbon-form-field .form-control {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    color: var(--carbon-text);
+    font-size: 0.875rem;
+    font-weight: 600;
+    height: 38px;
+}
+
+.carbon-modal .schd-carbon-form-field .form-control:focus {
+    border-color: var(--carbon-teal);
+    box-shadow: 0 0 0 3px rgba(10, 165, 194, 0.15);
+    outline: none;
+}
+
+.carbon-modal .schd-carbon-form-actions {
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.carbon-modal #schdCarbonModalCalculate {
+    align-items: center;
+    background: var(--carbon-teal);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-flex;
+    font-size: 0.875rem;
+    font-weight: 600;
+    gap: 0.4rem;
+    height: 38px;
+    padding: 0 1.125rem;
+    white-space: nowrap;
+    width: auto;
+}
+
+.carbon-modal #schdCarbonModalCalculate:hover,
+.carbon-modal #schdCarbonModalCalculate:focus {
+    background: var(--carbon-teal-dark);
+    color: #fff;
+    outline: none;
+}
+
+.carbon-modal #schdCarbonModalCalculate:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.carbon-modal .schd-carbon-modal-alert {
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    margin-bottom: 0.75rem;
+}
+ .carbon-modal .modal-header {
+        background: #e6f7fb;
+        border-bottom: 2px solid #0aa5c2;
+        border-left: 4px solid #0aa5c2;
+        height: 46px;
+        padding: 10px;
+    }
+    .carbon-modal .modal-header .modal-title {
+        font-weight: 600;
+        color: #1a2b3a;
+    }
+
+@keyframes carbon-modal-spin {
+    to { transform: rotate(360deg); }
+}
+
+.carbon-modal #schdCarbonModalLoading {
+    color: var(--carbon-text-muted);
+    font-size: 0.875rem;
+    padding: 0.75rem 0;
+    text-align: center;
+}
+
+.carbon-modal #schdCarbonModalLoading .fa-spinner {
+    animation: carbon-modal-spin 0.6s linear infinite;
+    color: var(--carbon-teal);
+    margin-right: 0.5rem;
+}
+
+.carbon-modal .carbon-results-panel {
+    background: #fff;
+    border: 1px solid var(--carbon-border);
+    border-left: 4px solid var(--carbon-teal);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.carbon-modal .carbon-results-inner {
+    padding: 1rem 1.125rem 1.125rem;
+}
+
+.carbon-modal .carbon-results-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.875rem;
+}
+
+.carbon-modal .carbon-results-heading {
+    color: var(--carbon-text);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.carbon-modal .carbon-metrics-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.625rem;
+}
+
+.carbon-modal .carbon-metric {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0.625rem 1rem 0.875rem;
+}
+
+.carbon-modal .carbon-metric-label {
+    align-items: center;
+    color: #64748b;
+    display: flex;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    min-height: 1.3em;
+    text-transform: uppercase;
+}
+
+.carbon-modal .carbon-metric-label sub,
+.carbon-modal .carbon-metric-label sup {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.carbon-modal .carbon-metric-label sub {
+    bottom: -0.25em;
+}
+
+.carbon-modal .carbon-metric-value {
+    color: #0c4a6e;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.22;
+}
+
+.carbon-modal .carbon-metric-value .carbon-unit,
+.carbon-modal .carbon-metric-value .carbon-grams,
+.carbon-modal .carbon-metric-sub {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.45;
+    margin-top: 8px;
+}
+
+.carbon-modal .carbon-metric-value .carbon-unit {
+    display: inline;
+    margin-top: 0;
+}
+
+.carbon-modal .carbon-metric-value .carbon-grams {
+    display: block;
+    margin-top: 4px;
+}
+
+.carbon-modal .carbon-metric-value .carbon-grams::after {
+    content: none;
+}
+
+.carbon-modal .carbon-metric-sub {
+    display: block;
+}
+
+.carbon-modal .carbon-metric--distance .carbon-metric-value {
+    white-space: nowrap;
+}
+
+.carbon-modal .carbon-metric--distance .carbon-metric-value::after {
+    color: #64748b;
+    content: " km";
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.carbon-modal .carbon-metric--distance .carbon-metric-sub {
+    color: #64748b;
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.45;
+    margin-top: 8px;
+    text-transform: none;
+}
+
+.carbon-modal .schd-carbon-info-sections {
+    margin-bottom: 1rem;
+}
+
+.carbon-modal .schd-carbon-info-card {
+    background: #fff;
+    border: 1px solid var(--carbon-border);
+    border-left: 4px solid var(--carbon-teal);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.carbon-modal .schd-carbon-info-card:last-child {
+    margin-bottom: 0;
+}
+
+.carbon-modal .schd-carbon-info-toggle {
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: var(--carbon-text);
+    cursor: pointer;
+    display: flex;
+    font-size: 0.875rem;
+    font-weight: 700;
+    gap: 0.5rem;
+    letter-spacing: 0.01em;
+    padding: 0.875rem 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.carbon-modal .schd-carbon-info-toggle:hover,
+.carbon-modal .schd-carbon-info-toggle:focus {
+    background: var(--carbon-surface);
+    outline: none;
+}
+
+.carbon-modal .carbon-info-icon {
+    align-items: center;
+    background: var(--carbon-teal-light);
+    border-radius: 50%;
+    color: var(--carbon-teal);
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 28px;
+    justify-content: center;
+    width: 28px;
+}
+
+.carbon-modal .schd-carbon-info-chevron {
+    color: var(--carbon-teal);
+    font-size: 0.75rem;
+    margin-left: auto;
+    transition: transform 0.2s ease;
+}
+
+.carbon-modal .schd-carbon-info-card.is-open .schd-carbon-info-chevron {
+    transform: rotate(180deg);
+}
+
+.carbon-modal .schd-carbon-info-body {
+    border-top: 1px solid var(--carbon-border);
+    color: var(--carbon-text-muted);
+    display: none;
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    padding: 0 1rem 1rem;
+}
+
+.carbon-modal .schd-carbon-info-card.is-open .schd-carbon-info-body {
+    display: block;
+    padding-top: 1.75rem;
+}
+
+.carbon-modal .schd-carbon-info-body p {
+    margin: 0 0 0.625rem;
+}
+
+.carbon-modal .schd-carbon-info-body p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+@media (max-width: 767px) {
+    .carbon-modal .schd-carbon-form-row {
+        flex-wrap: wrap;
+    }
+
+    .carbon-modal .schd-carbon-form-actions {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .carbon-modal #schdCarbonModalCalculate {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .carbon-modal .carbon-metrics-row {
+        flex-wrap: wrap;
+    }
+
+    .carbon-modal .carbon-metric {
+        flex: 1 1 calc(50% - 0.25rem);
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 479px) {
+    .carbon-modal .carbon-metric {
+        flex: 1 1 100%;
+    }
+}
+

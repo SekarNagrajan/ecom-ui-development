@@ -1,0 +1,819 @@
+/*================================================================================
+        Item Name: Stack - Responsive Admin Theme
+        Version: 3.1
+        Author: PIXINVENT
+        Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+
+/* menu iocns start */
+
+.fa-dsh {
+    background-image: url("../images/menu_icons/dash.png") !important;
+    width: 25px;
+    height: 13px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-seh {
+    background-image: url("../images/menu_icons/shed.png") !important;
+    width: 25px;
+    height: 16px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-tra {
+    background-image: url("../images/menu_icons/tracking.png") !important;
+    width: 25px;
+    height: 16px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.fa-bkg {
+    background-image: url("../images/menu_icons/booking.png") !important;
+    width: 25px;
+    height: 16px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-shi {
+    background-image: url("../images/menu_icons/shipping ins.png") !important;
+    width: 25px;
+    height: 16px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-rate {
+    background-image: url("../images/menu_icons/rates.png") !important;
+    width: 25px;
+    height: 21px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-agy {
+    background-image: url("../images/menu_icons/agency.png") !important;
+    width: 25px;
+    height: 19px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-bol {
+    background-image: url("../images/menu_icons/billing.png") !important;
+    width: 25px;
+    height: 19px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-vgm {
+    background-image: url("../images/menu_icons/vgm.png") !important;
+    width: 25px;
+    height: 19px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.fa-inv {
+    background-image: url("../images/menu_icons/vgm.png") !important;
+    width: 25px;
+    height: 19px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-cro {
+    background-image: url("../images/menu_icons/cro.png") !important;
+    width: 25px;
+    height: 19px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-imp {
+    background-image: url("../images/menu_icons/import.png") !important;
+    width: 25px;
+    height: 18px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-cst {
+    background-image: url("../images/menu_icons/group.png") !important;
+    width: 25px;
+    height: 20px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.fa-submenu {
+    background-image: url("../images/menu_icons/submenu.svg") !important;
+    width: 20px;
+    height: 15px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+
+/*End*/
+
+
+.sidebar-menu .disabled  {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.disabled a {
+    pointer-events: none;
+}
+
+.lable_check_align {
+    top: -15px;
+    vertical-align: middle;
+    position: relative;
+    left: -11px;
+}
+
+
+.main-menu.menu-dark .navigation>li.active>a, .main-menu.menu-dark .navigation>li.hover>a, .main-menu.menu-dark .navigation>li:hover>a {
+    color: #fff;
+    padding-left: 3px;
+    transition: .3s;
+    background: transparent;
+}
+
+body.vertical-layout.vertical-menu-modern.menu-collapsed .navbar .navbar-header .brand-logo {
+    position: absolute;
+    clip: rect(0px,47px,200px,0px);
+    top: 7px;
+    transition: .3s;
+}  
+
+body.vertical-layout.vertical-menu-modern.menu-collapsed .navbar .navbar-header.expanded .brand-logo {
+    position: absolute;
+    clip: rect(0px,182px,200px,0px);
+    transition: .3s;
+}
+
+body.vertical-layout.vertical-menu-modern .navbar .navbar-header .nav-toggle {
+    top: 0px;
+}
+
+.header-navbar .navbar-header .navbar-brand {
+    padding: 6px 0;
+}
+
+.sub_icon_pages {
+    width: 80px;
+    height: 80px;
+}
+
+.box_bg_clr {
+    background: #ccffcc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.box_sess_clr {
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: -1px 0px 9px -1px #868282;
+    border-radius: 10px;
+    margin-top: 20%;
+}
+
+.ses_exp {
+    font-weight: bold;
+    color: #ff0000;
+    margin-top: 18px;
+}
+
+.txt_succ {
+    font-weight: bold;
+    color: #62be82;
+}
+
+.switchery {
+    background-color: #b3aeae !important;
+}
+
+.sidebar-menu .disabled  {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.disabled a {
+    pointer-events: none;
+}
+
+.lable_check_align {
+    top: -15px;
+    vertical-align: middle;
+    position: relative;
+    left: -11px;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5
+}
+
+.dataTables_wrapper table.dataTable thead th,
+.dataTables_wrapper table.dataTable thead td {
+    white-space: normal;
+    /*vertical-align: middle;*/
+}
+
+div.dataTables_wrapper {
+    overflow-y: auto !important;
+}
+
+table.dataTable {
+    width: 100% !important;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 1px solid #CCC;
+}
+
+.dataTable .btn-lg {
+    font-size: 16px;
+    padding: 0px;
+    margin-right:4px;
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+}
+
+.box_regi_clr {
+    background: #fff;
+    padding-top: 120px;
+    padding-bottom: 35px;
+    /* box-shadow: -1px 0px 9px -1px #868282;*/
+    border-radius: 8px;
+    border:1px solid #ccc !important;
+}
+
+
+/* Mobile responsive  screen size start */
+
+@media only screen and (max-width: 600px) and (min-width: 360px)  {
+
+    .content_icon {
+        display: none;
+    }
+
+    .details_panel {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 0px !important;
+    }
+
+    .panel_inner_top {
+        margin-left: -10px !important;
+        margin-right: -20px !important;
+    }
+    .panel_inner_left {
+        width: 100% !important;
+    }
+    .panel_inner_top_1, .panel_inner_top_2, .panel_inner_top_3, .panel_inner_top_4 {
+        width: 50% !important;
+    }
+
+    .panel_inner_bottom_1, .panel_inner_bottom_2,.panel_inner_bottom_3, .panel_inner_bottom_4 {
+        width: 50% !important;   
+    }
+
+    .panel_inner_right {
+        border-left: 0px solid #ccc !important;
+    }
+    .panel_inner_service_note span {
+        margin-left: 0px !important;
+    }
+
+    .show_details .header_icon {
+        display: none !important;
+    }
+
+    .show_details {
+        margin: 0px 0px !important;
+        padding: 10px 43px !important;
+    }
+
+    .full-input {
+        margin-bottom: 7px !important;
+    }
+
+    .panel_inner_top, .panel_inner_bottom {
+        margin-left: 0px !important
+    }
+
+    .panel_inner_bottom_3, .panel_inner_bottom_4 {
+        text-align: left !important;
+    }
+
+    .panel_inner_right {
+        float: left !important;
+        padding-top: 0px !important;
+        height: 45px !important;
+        width: 50% !important;
+        margin-left: 85px !important;
+    }
+
+    .timeline td {
+        width: 100% !important;
+        display: inline-block !important;
+    }
+
+    .panel_inner_service_note {
+        margin-top: 10px !important;
+        margin-left: 10px !important;
+    }
+
+    .panel_inner_bottom_header {
+        margin-left: 10px !important;
+    }
+
+    .hori_trackig_line {
+        margin-left: -33px;
+        margin-right: -32px;
+    }
+
+    .note-info {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .btn_block_custom {
+        margin-bottom: 5px !important;
+    }
+
+    .txt_tra_data, .txt_tra_clr {
+        text-align: center !important;
+    }
+
+    .timeline-small.fancybox-content {
+        width: 100% !important;
+        top: -80px !important;
+    }
+
+    .fancy_label_date {
+        margin-left: 229px !important;
+        margin-top: -23px !important;
+        position: absolute !important;
+    }
+    .fancy_label {
+        padding-left: 55px !important;
+    }
+
+    .date_track {
+        margin-top: -22px !important;
+        margin-right: -15px !important;
+    }
+
+    .media-body {
+        margin-left: -25px !important;
+    }
+
+    .media-header {
+        margin-right: -25px !important;
+        margin-left: -25px !important;
+        padding-left: 10px !important;
+
+    }
+
+    .timeline-small .media {
+        margin-bottom: 18px !important;
+    }
+
+    .movement_title {
+        position: absolute !important;
+        max-width: 200px !important;
+        margin-top: -22px !important;
+    }
+    .stepwizard {
+        width: 110% !important;
+    }
+
+    .txt_port_name {
+        margin-left: -22px !important;
+    }
+
+    .txt_port_name_right {
+        margin-left: -96px !important;
+        right: 0px !important;
+        white-space: normal !important;
+    }
+
+    .app-content.content {
+        margin-bottom: 300px !important;
+    }
+
+    input.form-control, select.form-control {
+        margin-bottom: 5px !important;
+    }
+
+    .app-content .wizard>.content>.body {
+        margin-left: -17px !important;
+        margin-right: -24px !important;
+    }
+    .panel_inner_left.txt_box {
+        margin-left: -26px !important;
+        width: 123% !important;
+    }
+
+    .route_txt {
+        margin-right: 34px !important;
+    }
+
+    .checkbox-inline {
+        width: 61% !important;
+    }
+
+    #collapseShipper > .checkbox-inline {
+        width: 54% !important;
+    }
+
+    .app-content .wizard>.steps>ul>li {
+        width: 50% !important;
+    }
+
+    .control-label {
+        text-align: left !important;
+    }
+
+    .new_btn_si {
+        margin-left: 13px !important;
+    }
+
+    #siroutingdetails .panel_inner_left.txt_box,  #siroutingdetailspreview .panel_inner_left.txt_box  {
+        margin-left: -4px !important;
+        width: 103% !important;
+    }
+
+    #cargo_details  .col-sm-3 {
+        max-width: 100% !important;
+    }
+
+    .container_herader {
+        margin-left: -4px !important;
+    }
+
+    .heading_trainee_booking {
+        width: 80% !important;
+    }
+
+    .labl_preview.labe_width {
+        max-width: 100% !important;
+        white-space: nowrap !important;
+    }
+
+    #previewRoute .panel_inner_left.txt_box {
+        margin-left: -9px !important;
+        width: 107% !important;
+    }
+
+    input.form-control.inside_input, select.form-control.inside_input {
+        margin-bottom: 7px !important;
+    }
+
+    #captchaImage {
+        margin-bottom: 7px !important;
+    }
+
+    .form-control.txt_select_weight {
+        margin-top: 0px !important;
+        width: 48% !important;
+    }
+
+    .label_switch {
+        margin-left: 90px !important;
+    }
+
+    .btn_add_si {
+        float: right;
+        margin-bottom: -28px;
+    }
+
+    #cargopreview table, #datatablebyhaulagediv table, #previewRoute table, #previewdatatablebyhaulagediv table , #routingdetails table  {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .btn_grp_align {
+        float: none !important;
+        text-align: center !important;
+    }
+
+    .show_details_class_book {
+        margin-right: 34px !important;
+    }
+
+    .form-control.txt_borderno {
+        margin-bottom: 8px !important;
+    }
+
+    .delete_cargo {
+        right: -16px !important;
+    }
+
+    .eqpsize {
+        width: 112% !important;
+    }
+
+    .inc_dec {
+        margin-top: 8px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .vertical_line {
+        top: 9px !important;
+    }
+
+    .box_height_gray {
+        margin-left: 5px !important;
+        margin-right: -5px !important;
+        margin-bottom: -90px !important;
+    }
+
+    .ecom_padding_right.ecom_padding_left .inc_dec {
+        margin-left: 17px !important;
+        margin-right: 14px !important;
+    }
+
+    .txt_data .heading_trainee ,  .data_form_space .heading_trainee {
+        width: 80% !important; 
+    }
+
+    .box_line {
+        box-shadow: none !important;
+    }
+
+    .label-info {
+        white-space: normal !important;
+    }
+
+    .btn-warning {
+        margin-top: 6px !important;
+    }
+
+    input.number_val_cls + .help-block {
+        top: 50px !important;
+    }
+
+    input.cargo_weight + .help-block {
+        top: 26px !important; 
+    }
+
+    .ecom_padding_left_right .number {
+        margin-left: 13px !important;
+        width: 91% !important;
+    }
+
+    .main-menu ul.navigation-main {
+        max-height: 500px !important;
+        overflow-y: scroll !important;
+    }
+
+    .stepwizard {
+        display: none !important;
+    }
+
+    .switch {
+        margin-bottom: 10px !important;
+    }
+    .page_header {
+        margin-left: 0px !important;
+    }
+    .app-content .wizard>.steps {
+        z-index: 0;
+    }
+    .swap_btn {
+        right: 0px;
+        position: absolute;
+        margin-top: 23px;
+        transform: rotate(90deg);
+    }
+    .sticky_hide {
+        display: none !important;
+    }
+
+    .header-navbar .navbar-container ul.nav li a.dropdown-user-link .user-name {
+        display: inline !important;
+    }
+
+    .page_bottom_content {
+        margin-top: 55px !important;
+    }
+
+    .bkg_panel_inner_right {
+        float: left !important; 
+    }
+
+    .bkgtransshipment {
+        right: 50px;
+        position: absolute;
+    }
+    .control-label_dlg {
+        text-align: left;
+    }
+
+    .panel_inner_content {
+        overflow: auto !important;
+    }
+
+    #view_rates .modal-lg, #view_rates_details .modal-lg {
+        left: 0px !important;
+        overflow-y: auto;
+        max-height: 450px;
+    }
+
+    .label_edit_data {
+        margin-left: -54px !important;
+        margin-top: -10px !important;
+    }
+
+    .txt_edit_con {
+        margin-top: -27px !important;
+        right: -50px !important;
+        white-space: nowrap !important;
+    }
+    .value-rates_dlg {
+        margin-right: -50px !important;
+    }
+
+    .con_lable {
+        margin-left: 0px !important;
+    }
+
+    .inc_dec_dlg {
+        margin-left: 100px !important;
+        max-width: 40% !important;
+        margin-top: -43px !important;
+    }
+
+    .con_lable {
+        margin-left: 0px !important;
+    }
+
+    .contain_20ft {
+        width: 80px !important;
+    }
+
+    .contain_icon, .contain_icon_fthc {
+        width: 85px !important;
+    }
+
+    .label_name {
+        margin-top: 5px !important;
+    }
+    .spl_rate {
+        padding-bottom: 10px !important;
+    }
+    .control-label_dlg {
+        text-align: left !important;
+    }
+
+    .contain_20ft, .contain_icon, .contain_icon_fthc {
+        display: none;
+    }
+    .inc_dec_dlg + div {
+        position: absolute;
+        float: right;
+        margin-left: 264px !important;
+        margin-top: -10px;
+    }
+    div.dataTables_wrapper div.dataTables_length {
+        margin-bottom: 0px!important;
+    }
+
+}
+
+/* Mobile responsive  screen size End */
+
+/*Ipad Responsive  Screen Size Start */
+
+
+@media only screen and (max-width: 1024px) and (min-width: 768px)  {
+
+    .header-navbar .navbar-container ul.nav li a.dropdown-user-link .user-name {
+        display: inline-block !important;
+    }
+
+    .app-content.content {
+        margin-bottom: 550px !important
+    }
+
+    .page_bottom_content_regi {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    .Header_scroll {
+        top: 64px !important;
+        left: 120px !important;
+    }
+    .content_icon {
+        display: none !important;
+    }
+
+    .details_panel {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    .panel_inner_top_1, .panel_inner_top_2, .panel_inner_top_3, .panel_inner_top_4 {
+        width: 50% !important;
+    }
+
+    .panel_inner_bottom_1, .panel_inner_bottom_2,.panel_inner_bottom_3, .panel_inner_bottom_4 {
+        width: 50% !important;   
+    }
+    .panel_inner_top_2 {
+        border-right: 0px !important;
+    }
+    .panel_inner_bottom_3 {
+        text-align: left !important;
+    }
+    .panel_inner_bottom_4 {
+        text-align: left !important;
+    }
+    .txt_port_name {
+        margin-left: -25px !important;
+    }
+
+    .timeline-small.fancybox-content {
+        width: 80% !important;   
+    }
+    .Header_scroll {
+        display: none;
+    }
+
+    .panel_inner_left {
+        width: 65% !important;
+    }
+    .panel_inner_right  {
+        width: 35% !important;
+    }
+
+    #view_rates .modal-lg, #view_rates_details .modal-lg {
+        left: 84px !important;
+        top: 100px !important;
+    }
+
+    #view_rates .modal-content, #view_rates_details .modal-content {
+        overflow-y: auto;
+        max-height: 330px;
+    }
+
+    .col-sm-4 {
+        max-width: 47% !important;
+        flex: 0 0 47% !important;
+    }
+    .offset-md-2 {
+        margin-left: 0% !important;
+    }
+
+    .panel_inner_left.txt_box {
+        width: 100% !important;
+    }  
+
+    .align_plus_minus {
+        width: 68% !important;
+    }
+    .label_switch {
+        top: 0px;
+    }
+
+    #cargopreview table, #datatablebyhaulagediv table, #previewRoute table, #previewdatatablebyhaulagediv table , #routingdetails table  {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .txt_side_borderxx .col-sm-1  {
+        white-space: nowrap;
+    }
+    div.dataTables_wrapper div.dataTables_length {
+        margin-bottom: -44px!important;
+    }
+}
+
+/*Ipad Responsive  Screen Size End */
+
+
+
+

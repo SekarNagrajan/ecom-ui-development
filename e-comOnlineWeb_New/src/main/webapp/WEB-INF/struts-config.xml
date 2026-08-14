@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+<struts-config>
+    <form-beans>
+        <form-bean name="NewCCRCustomerStatementForm" type="net.ecom.formbeans.NewCCRCustomerStatementForm"/>
+        <form-bean name="LoginForm" type="net.ecom.formbeans.LoginForm"/>
+        <form-bean name="eCommForm" type="net.ecom.formbeans.eCommForm"/>
+        <form-bean name="EBookingViewAllForm" type="net.ecom.formbeans.EBookingViewAllForm"/>
+        <form-bean name="eCommScheduleBlwLocationForm" type="net.ecom.formbeans.eCommScheduleBlwLocationForm"/>
+        <form-bean name="SIsummaryForm" type="net.ecom.formbeans.SIsummaryForm"/>
+        <form-bean name="RatesContractForm" type="net.ecom.formbeans.RatesContractForm"/>
+        <form-bean name="TariffForm" type="net.ecom.formbeans.TariffForm"/>
+        <form-bean name="SurchargeForm" type="net.ecom.formbeans.SurchargeForm"/>
+        <form-bean name="SIEditForm" type="net.ecom.formbeans.SIEditForm"/>
+        <form-bean name="CustomerStatmentForm" type="net.ecom.formbeans.CustomerStatmentForm"/>
+        <form-bean name="NewCCRCustomerStatmentForm" type="net.ecom.formbeans.NewCCRCustomerStatmentForm"/>
+        <form-bean name="VGMSubmitForm" type="net.ecom.formbeans.VGMSubmitForm"/>
+        <form-bean type="net.ecom.formbeans.RateRequestForm" name="RateRequestForm"/>
+        <form-bean type="net.ecom.formbeans.RegistrationForm" name="RegistrationForm"/>
+        <form-bean type="net.ecom.formbeans.EbookingValidatorFormBeanNew" name="EbookingValidatorFormBeanNew"/>
+        <form-bean name="AmendmentBookingFormBean" type="net.ecom.formbeans.AmendmentBookingFormBean"/>
+        <form-bean name="PasswordResetForm" type="net.ecom.formbeans.PasswordResetForm"/>
+        <form-bean name="ContactusForm" type="net.ecom.formbeans.ContactusForm"/>
+        <form-bean name="BkgandAppointmentForm" type="net.ecom.formbeans.BkgandAppointmentForm"/>
+        <form-bean name="MailAlertForm" type="net.ecom.formbeans.MailAlertForm"/>
+        <form-bean name="ForgottenFormBean" type="net.ecom.formbeans.ForgottenFormBean"/>
+        <form-bean name="UserAuditForm" type="net.ecom.formbeans.UserAuditForm"/>
+        <form-bean name="SpecialPrivilegeForm" type="net.ecom.formbeans.SpecialPrivilegeForm"/>
+        <form-bean name="GlobalConfigForm" type="net.ecom.formbeans.GlobalConfigForm"/>
+        <form-bean name="CutoffConfigForm" type="net.ecom.formbeans.CutoffConfigForm"/>
+        <form-bean name="FieldConfigurationForm" type="net.ecom.formbeans.FieldConfigurationForm"/>
+        <form-bean name="ServiceRestrictionForm" type="net.ecom.formbeans.ServiceRestrictionForm"/>
+        <form-bean name="ImageUploadForm" type="net.ecom.formbeans.ImageUploadForm"/>
+        <form-bean name="CustomerAdvisoryForm" type="net.ecom.formbeans.CustomerAdvisoryForm"/>
+        <form-bean name="RatesForm" type="net.ecom.formbeans.RatesForm"/>
+        <form-bean name="RatesQuoteForm" type="net.ecom.formbeans.RatesQuoteForm"/>
+        <form-bean name="ForgotPasswordResetForm" type="net.ecom.formbeans.ForgotPasswordResetForm"/>
+    </form-beans>
+
+    <global-exceptions>
+
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome" path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action type="net.ecom.action.Accesslogin" path="/Accesslogin" name="LoginForm" scope="session">
+            <forward name="preloginLanguage" path="/Welcome.do"/>
+            <forward name="portSearch" path=".atport"/>
+            <forward name="vesselSearch" path=".atVessel"/>
+            <forward name="locationSearch" path=".btwLoc"/>
+            <forward name="ratescontract" path=".ratescontract"/>
+            <forward name="tariff" path=".eTariffInquiry"/>
+            <forward name="surcharge" path=".surcharge"/>
+            <forward name="newTracking" path=".tracking"/>
+            <forward name="carbonCalculator" path=".carbonCalculator"/>
+            <forward name="profile" path=".viewprofile"/>
+            <forward name="raterequest" path=".raterequest"/>
+            <forward name="quote" path=".quote"/>
+            <forward name="successvendoraudit" path=".successvendoraudit"/>
+            <forward name="newRegister" path="/NewRegistration.do"/>
+            <forward name="invalid" path="/Welcome.do"/>
+            <forward name="resetpass" path=".resetPassword"/>
+            <forward name="contactus" path="/Contactus.do"/>
+            <forward name="bkgandapmt" path="/BkgandAppointment.do"/>
+            <forward name="mailalert" path="/MailAlertView.do"/>
+            <forward name="forgotpass" path="/ForgotPassword.do"/>
+            <forward name="configView" path="/WEB-INF/jsp/Cpanel/GlobalConfigView.jsp"/>
+            <forward name="ImageUploadView" path="/WEB-INF/jsp/Agency/ImageUploadView.jsp"/>
+            <forward name="ImageUploadRearrangeView" path="/WEB-INF/jsp/Agency/ImageUploadRearrangeView.jsp"/>
+            <forward name="CustomerAdvisoryView" path="/WEB-INF/jsp/Agency/CustomerAdvisoryView.jsp"/>
+            <forward name="dashboard" path=".dashboard"/>
+            <forward name="bookingsummary" path="/ViewBookingAll.do?BookingRequestType=ViewBookingAll" redirect="true"/>
+            <forward name="Adminloginfailed" path="/Layout/AdminLogin.jsp"/>
+            <forward name="Agencylogin" path=".registerMenu"/>
+            <forward name="loadvalue" path="/WEB-INF/jsp/Registration/RegisterMenuView.jsp"/>
+            <forward name="usercreation" path=".usercreation"/>
+            <forward name="usercreationview" path="/WEB-INF/jsp/UserCreation/UserCreationView.jsp"/>
+            <forward name="rates" path=".rates"/>
+            <forward name="SuccessRegistration" path=".successRegister"/>
+            <forward name="ratesquote" path=".ratesquote"/>
+            <forward name="statsreport" path=".statsreport"/>
+            <forward name="specialPrivilege" path="/AdminAccess.do?type=specialprivi"/>
+            <forward name="dashboardChart" path="/DashBoardCharts.jsp"/>
+        </action>
+        <action path="/AdminAccess" type="net.ecom.action.AdminAccess" name="LoginForm">
+            <forward name="useraudit" path=".successvendoraudit"/>
+            <forward name="registerMenu" path=".registerMenu"/>
+            <forward name="specialPrivilege" path=".specialPrivilege"/>
+            <forward name="loadvalue" path="/WEB-INF/jsp/Registration/RegisterMenuView.jsp"/>
+            <forward name="loadvaluesave" path="/WEB-INF/jsp/Registration/RegisterMenuView.jsp"/>
+            <forward name="loadvalueedit" path="/WEB-INF/jsp/Registration/RegisterMenuView.jsp"/>
+            <forward name="loadvaluedelete" path="/WEB-INF/jsp/Registration/RegisterMenuView.jsp"/>
+            <forward name="emailtemplate" path=".emailtemplate"/>
+            <forward name="emailmsgtemplate" path="/msghelp.jsp"/>
+            <forward name="successfieldconfig" path=".fieldconfig"/>
+            <forward name="successsrvcrestrictconfig" path=".srvcrestrictconfig"/>
+            <forward name="successcutoffconfig" path="/cutoffconfig.do"/>
+            <forward name="resetadminpass" path=".resetadminpass"/>
+            <forward name="vendor" path=".vendor"/>
+            <forward name="assignedJSP" path="/WEB-INF/jsp/Agency/VendorModuleMappingView.jsp"/>
+            <forward name="dashboard" path=".dashboard"/>
+            <forward name="sqlFilter" path=".sqlFilter"/>
+            <forward name="globalConfig" path=".globalConfig"/>
+            <forward name="v1v2serviceconfig" path=".v1v2serviceconfig"/>
+            <forward name="adminv1v2serviceconfig" path=".adminv1v2serviceconfig"/>
+            <forward name="successconfigscreen" path=".successconfigscreen"/>
+            <forward name="Agencyloginfailed" path=".Agency"/>
+            <forward name="Adminloginfailed" path=".Admin"/>
+            <forward name="IPFilterView" path="/WEB-INF/jsp/Cpanel/IPFilterView.jsp"/>
+            <forward name="IPFilter" path=".IPFilter"/>
+            <forward name="customeradvisory" path=".customeradvisory"/>
+            <forward name="imageupload" path=".imageupload"/>
+            <forward name="useranalytics" path=".useranalytics"/>
+        </action>
+        <action input="/" path ="/Welcome" type="net.ecom.action.MainPage" name ="LoginForm">
+            <forward name="success" path=".login"></forward>
+            <forward name="login_E" path=".login_E"></forward>
+            <forward name="login_G" path="/login_G1.jsp"></forward>
+            <forward name="login_T" path=".login_T"></forward>
+            <forward name="login_A" path=".login_A"></forward>
+            <forward name="login_L" path=".login_L"></forward>
+            <forward name="login_O" path=".login_O"></forward>
+            <forward name="login_C" path="/login_C.jsp"></forward>
+            <forward name="login_mobile" path="/login_Mobile.jsp"></forward>
+            <forward name="login_F" path=".login_F"></forward>
+            <forward name="login_M" path=".login_M"></forward>
+        </action>
+        <action input="/" type = "net.ecom.action.eCommAction" path ="/eCommAction" name="eCommForm" scope="request" validate="true">
+            <forward name="success" path="/WEB-INF/jsp/Schedules/ScheduleView.jsp"/>
+            <!--            <forward name="failure" path="/MessageDisplay.jsp"/>-->
+        </action>
+        <action name="EBookingViewAllForm" path="/ViewBookingAll" scope="request" type="net.ecom.action.eBookingView" validate="false">
+            <forward name ="success" path=".viewBookingAll"/>
+            <forward name ="oblprint" path=".oblprintview"/>
+        </action>
+        <action path="/NewBooking" name="EBookingViewAllForm" type="net.ecom.action.eBookingView" validate="false" scope="request">
+            <forward name="newbooking" path=".newBooking"/>
+        </action>
+
+
+        <action input="/" path="/NewccrcustomerStatement" scope="session" name="NewCCRCustomerStatmentForm" type="net.ecom.action.NewCCRCustomerStatmentAction" validate="false">
+            <forward name="success" path=".customeradvisory"/>
+        </action>
+
+
+        <action input="/" path="/eComVessel" type="net.ecom.action.ecommSchdVesselAction" name = "eCommForm" scope="request" validate="true">
+            <forward name="success" path="/WEB-INF/jsp/Schedules/ScheduleView.jsp"/>
+            <!--            <forward name="failure" path="/MessageDisplay.jsp"/>-->
+            <forward name="invalid" path="/Welcome.do"/>
+        </action>
+        <action input="/" name="eCommScheduleBlwLocationForm" path="/eCommShedLocation" scope="request" type="net.ecom.action.eCommScheduleBlwLocationAction">
+            <forward name="success" path="/WEB-INF/jsp/Schedules/SchedulebetweenlocationView.jsp"/>
+            <forward name="nonmatchingschedule" path="/WEB-INF/jsp/Schedules/Non-MatchingSchedule.jsp"/>
+            <!--            <forward name="failure" path="/MessageDisplay.jsp"/>-->
+            <forward name="invalid" path="/Welcome.do"/>
+        </action>
+
+        <action path="/AjaxRequestDateRecords" scope="request" type="net.ecom.ajax.AjaxRequestDateRecords" name="EBookingViewAllForm" validate="false">
+            <forward name="success" path="/Requestpage.jsp"/>
+            <!--            <forward name="merge" path="/mergeResponse.jsp"/>-->
+        </action>
+        <action input="/" name="SIsummaryForm" path="/ShippingInstruction" scope="request" type="net.ecom.action.ShippingInstruction" validate="false">
+            <forward name="success" path=".SIsummary"/>
+        </action>
+        <action input=".ratescontract" type="net.ecom.action.RatesContractAction" path="/RateContractSubmit" scope="session"  name = "RatesContractForm" validate="true">
+            <forward name="success" path="/WEB-INF/jsp/Rates/RatesContractView.jsp"/>
+            <forward name="newcontract" path="/WEB-INF/jsp/Rates/RateContractView_New.jsp"/>
+        </action>
+        <action input=".ratesquote" type="net.ecom.action.RatesQuoteAction" path="/RateQuoteSubmit" scope="session"  name = "RatesQuoteForm" validate="true">
+            <forward name="success" path="/WEB-INF/jsp/Rates/RateQuoteView.jsp"/>
+        </action>
+        <action name="TariffForm" path="/TariffDetails" scope="request" type="net.ecom.action.TariffDetails" validate="false">
+            <forward name="success" path="/WEB-INF/jsp/Phase2/TariffView.jsp"/>
+        </action>
+        <action input="/SurchargeView.jsp" name="SurchargeForm" path="/SurchargeDetails" scope="request" type="net.ecom.action.SurchargeDetails" validate="true">
+            <forward name="success" path="/WEB-INF/jsp/Phase2/SurchargeView.jsp"/>
+        </action>
+        <action input="/" path="/croaction" scope="session" type="net.ecom.action.CROAction" validate="false">
+            <forward name="success" path=".cropage"/>
+        </action>
+        <action input="/" path="/EditSI" name="SIEditForm" type="net.ecom.action.EditSI" scope="request" validate="false">
+            <forward name="success" path=".SIbooking"/>
+            <forward name="siview" path=".SIView"/>
+            <forward name="sessionex" path="/SessionExpired.jsp"/>
+        </action>
+        <action path="/TrackingDetails" scope="request" type="net.ecom.action.TrackingDetailsAction">
+            <forward name="success" path="/WEB-INF/jsp/Tracking/TrackingDetails.jsp"/>
+            <forward name="AllMovement" path="/WEB-INF/jsp/Tracking/TrackingAllMovement.jsp"/>
+
+            <!--            <forward name="failure" path="/MessageDisplay.jsp"/>-->
+        </action>
+        <action path="/LiveMap" scope="request" type="net.ecom.action.LiveMapAction">
+        </action>
+        <action input="/" path="/arrival" scope="session" type="net.ecom.action.ArrivalNoticeActions" validate="false">
+            <forward name="success" path=".arrivalNotice"/>
+        </action>
+        <action input="/" path="/deliveryorder" scope="session" type="net.ecom.action.DOSummaryAction" validate="false">
+            <forward name="success" path=".deliveryorder"/>
+        </action>
+        <action input="/" path="/custstmt" scope="session" type="net.ecom.action.CustomerStatementAction" validate="false">
+            <forward name="success" path=".customerstmt"/>
+        </action>
+        <action input="/" name="CustomerStatmentForm" path="/CustStmtSearchAction" scope="session" type="net.ecom.action.CustStmtSearchAction" validate="false">
+            <forward name="success" path="/custstmt.do"/>
+            <forward name="accSuccess" path="/WEB-INF/jsp/Phase2/AccountSummaryDetails.jsp"/>
+            <forward name="invSuccess" path="/WEB-INF/jsp/Phase2/CSInvoiceDetails.jsp"/>
+            <forward name="paySuccess" path="/WEB-INF/jsp/Phase2/PaymentDetails.jsp"/>
+            <forward name="outSuccess" path="/WEB-INF/jsp/Phase2/OutstandingDetails.jsp"/>
+            <forward name="failure" path="/custstmt.do"/>
+        </action>
+        <action input="/" path="/newinvdet" scope="session" type="net.ecom.action.CustomerStatementAction" validate="false">
+            <forward name="success" path=".invstmt"/>
+        </action>
+        <action input="/" name="CustomerStatmentForm" path="/NewInvoiceAction" scope="session" type="net.ecom.action.NewInvoiceAction" validate="false">
+            <forward name="success" path="/newinvdet.do"/>
+            <forward name="invSuccess" path="/WEB-INF/jsp/Phase2/NewInvoiceTableDet.jsp"/>
+            <forward name="failure" path="/newinvdet.do"/>
+        </action>
+
+        <action path="/ecomvgm" type="net.ecom.action.ESLVGMAction" scope="request">
+            <forward name="success" path=".ecomvgm"/>
+        </action>
+        <action path="/SubmitVGM" scope="request" type="net.ecom.action.SubmitVGMAction" name="VGMSubmitForm" validate="false">
+            <forward name="success" path=".ecomvgmsuccess"/>
+            <forward name="failure" path=".ecomvgm"/>
+            <!--            <forward name="sessionex" path="/SessionExpired.jsp"/>-->
+        </action>
+        <action input=".raterequest" type="net.ecom.action.RateRequestAction" path="/RateRequest" scope="session"  name = "RateRequestForm" validate="true">
+            <forward name="RateRequestResult" path=".raterequest"/>
+        </action>
+        <action input="/" name="SIEditForm" path="/SubmitSI" scope="request" type="net.ecom.action.SubmitSI" validate="true">
+            <forward name="success" path=".SIdisplayMsg"/>
+            <forward name="failure" path=".SIbooking"/>
+            <forward name="duplicate" path=".SIsummary"/>
+        </action>
+        <action path="/NewRegistration" type="net.ecom.action.NewRegistration" name="RegistrationForm" scope="request" validate="false">
+            <forward name="newRegistration" path=".newRegister"/>
+            <forward name="terms" path="/termsCondition.jsp"/>
+            <forward name="welcome" path="/Welcome.do"/>
+        </action>
+        <action input=".newRegister" name="RegistrationForm" path="/SaveRegistration" scope="request" type="net.ecom.action.Registration" validate="true">
+            <forward name="success" path=".successRegister"/>
+            <forward name="Failure" path=".newRegister"/>
+        </action>
+        <action input=".newBooking" validate="true" name="EbookingValidatorFormBeanNew" path="/ebookingsaveNew" scope="request" type="net.ecom.action.ebookingsaveNew">
+            <forward name="success" path=".SuccessPage"/>
+            <forward name="error" path=".ErrorPage"/>
+            <forward name ="showrecords" path=".viewBookingAll"/>
+            <forward name="new" path=".newBooking"/>
+        </action>
+
+        <action input="/" path="/ebooking_crud" scope="session" type="net.ecom.action.ebooking_crud">
+            <forward name="EDIT_BOOKING" path=".editBooking"/>
+            <forward name="viewAll" path="/WEB-INF/jsp/Booking/eBookingView.jsp"/>
+            <forward name="sessionex" path="/SessionExpired.jsp"/>
+            <!--            <forward name="edit" path="/ajaxremovegrid_attribute.do"/>-->
+        </action>
+        <action path="/ViewEbookingEntry" type="net.ecom.action.ViewEbookingEntry" input="/WEB-INF/jsp/Booking/eBookingView.jsp" scope="request">
+            <!--            <forward name="success" path="/WEB-INF/jsp/Booking/viewEbooking.jsp"/>-->
+            <forward name="successNew" path=".viewEbookingNew"/>
+            <forward name="sessionex" path="/SessionExpired.jsp"/>
+        </action>
+        <action input="/editamendmentbooking" name="AmendmentBookingFormBean" path="/amendmentbookingsave" scope="request" type="net.ecom.action.BKGAmemdmentSaveAction">
+            <forward name="success" path=".SuccessPage"/>
+            <forward name ="showrecords" path=".viewBookingAll"/>
+        </action>
+        <action input="/ebooking_crm_crud.jsp" path="/editamendmentbooking" scope="request" type="net.ecom.action.BookingAmendmentAction">
+            <forward name="success" path=".editamendmentbooking"/>
+            <forward name="sessionex" path="/SessionExpired.jsp"/>
+        </action>
+        <action name="EBookingViewAllForm" path="/BookingCancelAction" scope="request" type="net.ecom.action.BookingCancelAction" validate="false">
+            <forward name="success" path="/ViewBookingAll.do?BookingRequestType=ViewBookingAll" redirect="true"/>
+            <forward name="sessionex" path="/SessionExpired.jsp"/>
+        </action>
+        <action name="SIEditForm" path="/OblPrintAction" scope="session" type="net.ecom.action.OblPrintAction">
+            <forward name="fail" path="/oblmsg.jsp"/>
+            <forward name="success" path="/oblmsg.jsp"/>
+            <!--            <forward name="failure" path="/error.jsp"/>-->
+        </action>
+        <action path="/ManifestPrintAction" scope="session" type="net.ecom.action.ManifestPrintAction">
+            <forward name="fail" path="/oblmsg.jsp"/>
+            <forward name="success" path="/oblmsg.jsp"/>
+            <!--            <forward name="failure" path="/error.jsp"/>-->
+        </action>
+        <action name="SIEditForm" path="/BLEditAction" scope="request" type="net.ecom.action.BLEditAction">
+            <forward name="success" path=".BLSubmit"/>
+            <forward name="siview" path=".BLView"/>
+            <forward name="sessionex" path="/SessionExpired.jsp"/>
+        </action>
+        <action input="/BLEdit.jsp" name="SIEditForm" path="/SubmitBL" scope="request" type="net.ecom.action.SubmitBL">
+            <forward name="success" path=".BLdisplayMsg"/>
+            <!--            <forward name="failure" path=".BLbooking"/>-->
+        </action>
+        <action type="net.ecom.action.DynamicColumnSearch" path="/DynamicColumn" validate ="false">
+            <forward name="DynamicSearch" path="/DynamicSearchColumn.jsp" />
+        </action>
+        <action path="/CROJasper" scope="session" type="net.ecom.action.CROJasper">
+            <forward name="fail" path="/WEB-INF/jsp/Phase2/CROMsg.jsp"/>
+            <forward name="success" path="/WEB-INF/jsp/Phase2/CROMsg.jsp"/>
+        </action>
+        <action input="/" name="PasswordResetForm" path="/passwordresetadmin" scope="request" type="net.ecom.action.PasswordResetActionadmin" validate="false">
+            <forward name="success" path="/WEB-INF/jsp/PasswordReset/ecompasswordsuccess.jsp"/>
+            <forward name="failure" path=".resetadminpass"/>
+        </action>
+        <action input="/" name="PasswordResetForm" path="/passwordreset" scope="request" type="net.ecom.action.PasswordResetAction" validate="false">
+            <forward name="success" path="/WEB-INF/jsp/PasswordReset/ecompasswordsuccess.jsp"/>
+            <forward name="failure" path=".resetPassword"/>
+            <forward name="error" path="/Welcome.do"/>
+        </action>
+        <action path="/Contactus" type="net.ecom.action.Contactus" name="ContactusForm" scope="request" validate="false">
+            <forward name="contactus" path=".viewcontact"/>
+        </action>
+        <action path="/BkgandAppointment" type="net.ecom.action.BkgandAppointment" name="BkgandAppointmentForm" scope="request" validate="false">
+            <forward name="bkgandapmt" path=".bkgandappmt"/>
+        </action>
+        <action path="/MailAlertView" type="net.ecom.action.MailAlertViewAction" scope="request" validate="false">
+            <forward name="mailalert" path=".mailalert"/>
+        </action>
+        <action path="/SaveMailAlert" type="net.ecom.action.MailAlertSaveAction" name="MailAlertForm" scope="request" validate="false">
+            <forward name="success" path=".mailalert"/>
+        </action>
+        <action path="/ForgotPassword" type="net.ecom.action.ForgottonAction" name="ForgottenFormBean" scope="request" validate="false">
+            <forward name="forgotpass" path=".forgot"/>
+        </action>
+        <action input="/WEB-INF/jsp/Agency/UserAudit.jsp" name="UserAuditForm" path="/UserAudit" scope="session" type="net.ecom.action.UserAudit">
+            <forward name="useraudit" path="/WEB-INF/jsp/Agency/UserAuditView.jsp"/>
+        </action>
+        <action input="/WEB-INF/jsp/Agency/SpecialPrivilege.jsp" name="SpecialPrivilegeForm" path="/SpecialPrivilege" scope="session" type="net.ecom.action.SpecialPrivilege">
+            <forward name="specialprivilege" path="/WEB-INF/jsp/Agency/SpecialPriviView.jsp"/>
+        </action>
+        <action input="/" path="/cutoffconfig" scope="request" type="net.ecom.action.CutoffConfigAction">
+            <forward name="success" path=".viewcutoffconfig"/>
+        </action>
+        <action path="/GlobalConfigAction" type="net.ecom.action.GlobalConfigAction" scope="request" validate="false" name="GlobalConfigForm">
+            <forward name="success" path=".globalConfig"/>
+            <forward name="successadmin" path=".successconfigscreen"/>
+        </action>
+        <action input="/" name="CutoffConfigForm" path="/savecutoffconfig" validate="false" scope="request" type="net.ecom.action.CutoffConfigSaveAction">
+            <forward name="success" path=".viewcutoffconfig"/>
+        </action>
+        <action input="/" path="/cutoffconfigview" scope="request" type="net.ecom.action.CutoffConfigAction">
+            <forward name="success" path="/WEB-INF/jsp/Cpanel/CutoffConfigurationView.jsp"/>
+        </action>
+        <action input="/" name="FieldConfigurationForm" path="/savefieldconfig" validate="false" scope="request" type="net.ecom.action.FieldConfigSaveAction">
+            <forward name="success" path=".fieldconfig"/>
+        </action>
+        <action input="/" path="/fieldconfigview" scope="request" type="net.ecom.action.FieldConfigurationView">
+            <forward name="success" path="/WEB-INF/jsp/Agency/FieldConfigurationView.jsp"/>
+        </action>
+        <action input="/" path="/servicerestrictview" scope="request" type="net.ecom.action.ServiceRestrictViewAction">
+            <forward name="success" path="/WEB-INF/jsp/Agency/ServiceRestrictionView.jsp"/>
+        </action>
+        <action input="/" name="ServiceRestrictionForm" path="/savesvrcrestrict" validate="false" scope="request" type="net.ecom.action.ServiceRestrictAction">
+            <forward name="success" path=".srvcrestrictconfig"/>
+        </action>
+        <action input="/" name="ImageUploadForm" path="/ImageUpload" scope="session" type="net.ecom.action.ImageUploadAction">
+            <forward name="success" path=".imageupload"/>
+        </action>
+        <action input="/CustomerAdvisory.jsp" name="CustomerAdvisoryForm" path="/CustomerAdvisory" scope="session" type="net.ecom.action.CustomerAdvisoryAction">
+            <forward name="SaveSuccess" path=".customeradvisory"/>
+        </action>
+        <action name="SIEditForm" path="/ArrivalPrintAction" scope="session" type="net.ecom.action.ArrivalPrintAction">
+            <forward name="fail" path="/oblmsg.jsp"/>
+            <forward name="success" path="/oblmsg.jsp"/>
+            <!--            <forward name="failure" path="/error.jsp"/>-->
+        </action>
+        <action path="/doprintaction" scope="session" type="net.ecom.action.DOPrintAction">
+            <forward name="fail" path="/oblmsg.jsp"/>
+            <forward name="success" path="/oblmsg.jsp"/>
+            <!--            <forward name="failure" path="/error.jsp"/>-->
+        </action>
+        <action path="/RecepitPrintAction" scope="session" type="net.ecom.action.RecepitPrintAction">
+            <forward name="fail" path="/oblmsg.jsp"/>
+            <forward name="success" path="/oblmsg.jsp"/>
+            <!--            <forward name="failure" path="/error.jsp"/>-->
+        </action>
+        <action path="/InvoicePrintAction" scope="session" type="net.ecom.action.InvoicePrintAction">
+            <forward name="fail" path="/oblmsg.jsp"/>
+            <forward name="success" path="/oblmsg.jsp"/>
+            <!--            <forward name="failure" path="/error.jsp"/>-->
+        </action>
+        <action name="RatesForm" path="/RatesAction" scope="request" type="net.ecom.action.RatesAction" validate="false">
+            <forward name="success" path="/WEB-INF/jsp/Rates/RatesViewNew.jsp"/>
+        </action>
+        <action input="/" path="/newccrcuststmt" name ="NewCCRCustomerStatementForm" scope="session" type="net.ecom.action.NewCCRCustStmtAction">
+            <forward name="success" path=".newccrcuststmt"/>
+        </action>
+        <action input="/" path="/CreditControlJasper" scope="session" type="net.ecom.action.CreditControlJasper">
+            <forward name="fail" path="/WEB-INF/jsp/Phase2/CROMsg.jsp"/>
+            <forward name="success" path="/WEB-INF/jsp/Phase2/CROMsg.jsp"/>
+        </action>
+        <action input="/" path="/PaymentHistoryJasper" scope="session" type="net.ecom.action.PaymentHistoryJasper">
+            <forward name="fail" path="/WEB-INF/jsp/Phase2/CROMsg.jsp"/>
+            <forward name="success" path="/WEB-INF/jsp/Phase2/CROMsg.jsp"/>
+        </action>
+        <action input="/" path="/cargoprotect" type="net.ecom.action.CargoProtect">
+            <forward name="cargoprotect" path=".cargoprotect"/>
+            <forward name="faq" path=".faq"/>
+        </action>
+        <action path="/tracking" type="net.ecom.action.TrackingAction">
+            <forward name="tracking" path=".tracking"/>
+        </action>
+        <action path="/byvessel" type="net.ecom.action.ByVesselAction">
+            <forward name="byvessel" path=".atVessel"/>
+        </action>
+        <action path="/byport" type="net.ecom.action.ByPortAction">
+            <forward name="byport" path=".atport"/>
+        </action>
+        <action path="/schedules" type="net.ecom.action.SchedulesAction">
+            <forward name="schedules" path=".btwLoc"/>
+        </action>
+        <action path="/carbonFromLogin" type="net.ecom.action.CarbonFromLoginAction">
+            <forward name="carbonCalculator" path=".carbonCalculator"/>
+        </action>
+        <action path="/mcn" scope="request" type="net.ecom.action.MCNAction" validate="false">
+            <forward name="success" path=".MCNsummary"/>
+        </action>
+        <action name="SIEditForm" path="/MCNEditAction" scope="request" type="net.ecom.action.MCNEditAction">
+            <forward name="success" path=".MCNSubmit"/>
+            <forward name="siview" path=".MCNView"/>
+        </action>
+        <action input="/MCNEdit.jsp" name="SIEditForm" path="/SubmitMCN" scope="request" type="net.ecom.action.SubmitBL">
+            <forward name="success" path=".MCNDisplayMsg"/>
+            <!--            <forward name="failure" path=".BLbooking"/>-->
+        </action>
+        <action input="/" path="/cargoprotectpdf" scope="session" type="net.ecom.action.CargoProtectPDF">
+            <forward name="success" path=".cargoprotectpdf"/>
+        </action>
+        <action path="/BLbatchPrint" scope="request" type="net.ecom.action.BLbatchPrintAction" validate="false">
+            <forward name ="success" path=".oblbatchprint"/>
+        </action>
+        <action name="SIEditForm" path="/MCNPrintAction" scope="session" type="net.ecom.action.MCNPrintAction">
+            <forward name="fail" path="/oblmsg.jsp"/>
+            <forward name="success" path="/oblmsg.jsp"/>
+            <!--            <forward name="failure" path="/error.jsp"/>-->
+        </action>
+        <action path="/notice" scope="request" type="net.ecom.action.NoticeAction" validate="false">
+            <forward name ="success" path=".notice"/>
+        </action>
+
+        <action path="/customerPaymentHistory" scope="request" type="net.ecom.action.CustomerPaymentHistoryAction" validate="false">
+            <forward name="success" path=".customerPaymentHistory"/>
+        </action>
+
+        <action path="/extTracking" scope="request" type="net.ecom.action.ExternalTrackingAction" validate="false">
+            <forward name="newTracking" path=".tracking"/>
+            <forward name="carbonCalculator" path=".carbonCalculator"/>
+            <forward name="sessionex" path="/SessionExpired.jsp"/>
+        </action>
+        <action path="/extSchedule" scope="request" type="net.ecom.action.ExternalScheduleAction" validate="false">
+            <forward name="locationSearch" path=".btwLoc"/>
+            <forward name="sessionex" path="/SessionExpired.jsp"/>
+        </action>
+
+        <action path="/saveQuotation" scope="request" type="net.ecom.action.SaveQuotation" validate="false">
+            <forward name ="success" path=".quotesuccess"/>
+        </action>
+
+        <action input="/WEB-INF/jsp/PasswordReset/forgotPasswordReset.jsp" name="ForgotPasswordResetForm" path="/forgotPasswordReset" scope="request" type="net.ecom.action.ForgotPasswordResetAction" validate="true">
+            <forward name="success" path="/WEB-INF/jsp/PasswordReset/ecompasswordsuccess.jsp"/>
+            <forward name="failure" path="/WEB-INF/jsp/PasswordReset/forgotPasswordReset.jsp"/>
+        </action>
+
+        <action path="/validatePasswordResetToken" scope="request" type="net.ecom.action.ValidatePasswordResetTokenAction" validate="false">
+            <forward name="valid" path="/WEB-INF/jsp/PasswordReset/forgotPasswordReset.jsp"/>
+            <forward name="invalid" path="/WEB-INF/jsp/PasswordReset/tokenError.jsp"/>
+            <forward name="redirect" path="/Accesslogin.do?type=forgot"/>
+        </action>
+
+        <!-- User Analytics Action -->
+        <action path="/UserAnalytics" type="net.ecom.action.UserAnalyticsAction">
+        </action>
+
+        <action path="/stripeWebhook" type="net.ecom.stripe.StripeWebhookAction" scope="request" validate="false" />
+
+        <action path="/stripeSuccess" type="net.ecom.stripe.StripeSuccessAction" scope="request" validate="false">
+            <forward name="success" path=".stripeSuccess" />
+        </action>
+
+        <action path="/stripeCancel" type="net.ecom.stripe.StripeCancelAction" scope="request" validate="false">
+            <forward name="success" path=".stripeCancel" />
+        </action> 
+
+        <action path="/secureStripePayment" type="net.ecom.action.SecureStripePaymentAction" scope="request" validate="false"  />
+
+        <!-- N-Genius (Network International) Payment Actions -->
+        <action path="/ngeniusWebhook" type="net.ecom.ngenius.NGeniusWebhookAction" scope="request" validate="false" />
+
+        <action path="/ngeniusSuccess" type="net.ecom.ngenius.NGeniusSuccessAction" scope="request" validate="false">
+            <forward name="success" path=".ngeniusSuccess" />
+        </action>
+
+        <action path="/ngeniusCancel" type="net.ecom.ngenius.NGeniusCancelAction" scope="request" validate="false">
+            <forward name="success" path=".ngeniusCancel" />
+        </action>
+
+        <action path="/secureNGeniusPayment" type="net.ecom.ngenius.NGeniusPaymentAction" scope="request" validate="false" />
+
+        <action path="/paymentHistory" type="net.ecom.action.PaymentHistoryAction" scope="request" validate="false">
+            <forward name="success" path=".paymentHistory" />
+        </action>
+
+    </action-mappings>
+
+    <controller processorClass="net.ecom.controller.RequestController"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>
+    <message-resources parameter="com/myapp/struts/ApplicationResource_en" key="en"/>
+    <message-resources parameter="com/myapp/struts/ApplicationResource_zh" key="zh"/>
+    <message-resources parameter="com/myapp/struts/ApplicationResource_ma" key="ma"/>
+    <message-resources parameter="com/myapp/struts/ApplicationResource_es" key="es"/>
+
+
+    <message-resources key="languageName" parameter="com/myapp/struts/languageSelection"/>
+
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+
+</struts-config>

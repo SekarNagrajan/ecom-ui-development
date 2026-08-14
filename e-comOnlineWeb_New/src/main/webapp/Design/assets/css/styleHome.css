@@ -1,0 +1,235 @@
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	color: #333333;
+	font-size: 12px;
+	font-family: 'Poppins', sans-serif;
+}
+.cs_left {
+	width: 50%;
+	float: left;
+	background-image: url("/Ecommaster/ship_C.png");
+	background-size: 100% 100%;
+	height: 100vh;
+}
+.cs_left img {
+	max-width: 300px !important;
+	text-align: center;
+	margin:30px 50px;
+        
+}
+.cs_right {
+	width: 50%;
+	float: left;
+}
+.cs_nav {
+	margin: 30px;
+	background: #f7f8fb;
+	border-radius: 50px;
+	
+}
+.cs_nav li {
+	display: inline-block;
+	margin-left: 20px;
+}
+.cs_nav li a {
+	color: #333333;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px;
+	display: inline-block;
+	font-weight: 500;
+}
+.cs_nav li a i {
+	margin-right: 5px;
+	font-size: 14px;
+}
+body .accordion-button:not(.collapsed)::after {
+    background-image: url("../images/homePage_icons/minus.png");
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
+}
+.accordion-button::after {
+    background-image: url("../images/homePage_icons/plus.png");
+    transform: scale(1) !important;
+}
+
+.accordion-item {border: none;}
+body .accordion-button:not(.collapsed),.accordion-button,.title-sign {
+    color: #ffffff;
+    background-color: #201b52;
+    box-shadow: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding:10px 15px;
+    height: 40px;
+    font-size: 15px;
+   
+}
+.accordion-button:hover {
+	background-color: #140a71;
+}
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+	border-bottom-right-radius: 15px;;
+    border-bottom-left-radius: 15px;;
+}
+.form-group input,.form-group select {
+	width: 100%;
+	border-radius: 10px;
+	background-color: #edeff5 !important;
+	padding: 10px;
+	border: none;
+	margin-bottom: 10px;
+}
+.org-del,.ft-date {
+	background-image: url("../images/homePage_icons/location.png");
+	background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: 97% 8px;
+}
+.ft-date {background-image: url("../images/homePage_icons/calendar.png")}
+.submit-btn {
+	width: 100%;
+	background: #80cadc;
+	color: #ffffff;
+	padding: 15px;
+	border-radius: 15px;
+	border: none;
+	outline: none;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.cs-forms .col-1 img{
+	max-width: 25px;
+    margin-top: 5px
+}
+.cs-forms .col-5 {
+	width: 45.666667%;
+}
+.forgot-reg {
+	text-align: center;
+	margin-top: 15px;
+}
+.forgot-reg a {
+	font-weight: 600;
+	color: #201b52;
+	text-decoration: none;
+
+}
+.title-sign {
+	font-size: 1rem;
+	margin-bottom: 15px;
+}
+.login-close {
+	text-align: right;
+}
+.login-close img {
+	max-width: 20px;
+}
+.cs_model_sec {
+	position: fixed;
+    top: 50px;
+    right: 0;
+    width: 40%;
+    margin-right: 5% !important;
+    background: #fff;
+    bottom: 0;
+}
+.cs_model {display: none;}
+.cs_nav li a.activelogin,.cs_nav li a:hover {color: #c7790e;}
+.accordion-button img {
+	max-width: 16px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+.screen-icon {max-width: 13px;margin-left: 30px}
+.copyrights {
+	bottom: 10px;
+    position: absolute;
+    left: 50px;
+    color: #fff;
+}
+.title-sign{
+	background-image: url("../images/homePage_icons/refer.png");
+	background-size: 16px 16px;
+    padding-left: 48px;
+    background-repeat: no-repeat;
+    background-position: 22px 10px;
+}
+.submit-btn:hover, .submit-btn:focus {
+   background-color: #0897b9;
+   transition: 0.9s;
+}
+.cs_model .form-group input {
+	font-weight: 500;
+}
+label.error {
+    color: red;
+    font-weight: normal !important;
+    margin-bottom: 10px !important;
+}
+.refresh_cap {
+    font-size: 25px;
+    vertical-align: middle;
+    margin-left: 10px;
+    color: #4466f2;
+    position: relative;
+    top: 13px;
+}
+div.datepicker-days tr td , div.datepicker-days tr th , div.datepicker-months tr td , div.datepicker-months tr th, div.datepicker-years tr td , div.datepicker-years tr th   {
+    vertical-align: middle !important;
+}
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}

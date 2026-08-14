@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+    <definition name=".HomePageLayout" path="/Layout/HomePageLayout.jsp">
+        <put name="title" value="e-Commerce"/>
+        <put name="menu" value="/Layout/MenuLogin.jsp"/>
+        <put name="footer" value="/Layout/HomeFooter.jsp"/>
+    </definition>
+    <definition name=".mainloginLayout_new" path="/Layout/MainLoginLayout.jsp">
+        <put name="title" value="e-Commerce"/>
+        <put name="menu" value="/Layout/MenuLogin.jsp"/>
+        <put name="footer" value="/Layout/footer.jsp"/>
+    </definition>
+    <definition name=".login" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/login.jsp"/>
+    </definition>
+    <definition name=".login_E" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/login_E.jsp"/>
+    </definition>
+    <definition name=".login_T" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/login_T.jsp"/>
+    </definition>
+    <definition name=".login_G" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/login_G.jsp"/>
+    </definition>
+    <definition name=".login_A" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/login_A.jsp"/>
+    </definition>
+    <definition name=".login_L" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/login_L.jsp"/>
+    </definition>
+    <definition name=".login_O" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/login_O.jsp"/>
+    </definition>
+    <definition name=".login_F" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/login_F.jsp"/>
+    </definition>
+    <definition name=".login_M" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/login_M.jsp"/>
+    </definition>
+    <definition name=".atport" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Schedules/eCommPortSearch.jsp"/>
+    </definition>
+    <definition name=".atVessel" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Schedules/eCommVessel.jsp"/>
+    </definition>
+    <definition name=".btwLoc" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Schedules/eCommSchedules.jsp"/>
+    </definition>
+    <definition name =".viewBookingAll" extends =".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Booking/eBookingView.jsp"/>
+    </definition>
+    <definition name =".newBooking" extends =".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Booking/ebookingcrmnew.jsp"/>
+    </definition>
+    <definition name =".NewccrcustomerStatementPage" extends =".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Phase2/NewCCRCustomerStatement.jsp"/>
+    </definition>
+
+    <definition name=".SIsummary" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/SI/SISummary.jsp"/>
+    </definition>
+    <definition name=".ratescontract" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Rates/RatesContract.jsp"/>
+    </definition>
+    <definition name=".ratesquote" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Rates/RatesQuote.jsp"/>
+    </definition>
+    <definition name=".eTariffInquiry" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Phase2/eTariffInquiry.jsp"/>
+    </definition>
+    <definition name=".surcharge" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Phase2/surcharge.jsp"/>
+    </definition>
+    <definition name=".cropage" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Phase2/CROSummary.jsp"/>
+    </definition>
+    <definition name=".oblprintview" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/BL/BLSummary.jsp"/>
+    </definition>
+    <definition name=".SIbooking" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/SI/SIBookingDetails.jsp"/>
+    </definition>
+    <definition name=".tracking" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Tracking/Tracking.jsp"/>
+    </definition>
+    <definition name=".carbonCalculator" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Carbon/CarbonCalculator.jsp"/>
+    </definition>
+    <definition name=".arrivalNotice" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Phase2/ArrivalNotice.jsp"/>
+    </definition>
+    <definition name=".deliveryorder" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Phase2/DeliveryOrderSummary.jsp"/>
+    </definition>
+    <definition name=".customerstmt" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Phase2/CustomerStatementView.jsp"/>
+    </definition>
+    <definition name=".invstmt" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Phase2/NewInvoiceDetails.jsp"/>
+    </definition>
+    <definition name =".ecomvgm" extends =".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/VGM/EcomVGM.jsp"/>
+    </definition>
+    <definition name =".ecomvgmsuccess" extends =".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/VGM/VGMSuccess.jsp"/>
+    </definition>
+    <definition name=".viewprofile" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/profile.jsp"/>
+    </definition>
+    <definition name=".raterequest" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Rates/RateRequest.jsp"/>
+    </definition>
+    <definition name=".quote" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Rates/Quote/QuoteCreation.jsp"/>
+    </definition>
+    <definition name=".quotesuccess" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Rates/Quote/SuccessSave_quote.jsp"/>
+    </definition>
+    <definition name=".successvendoraudit" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Agency/UserAudit.jsp"/>
+    </definition>
+    <definition name=".newRegister" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Registration/Registration.jsp"/>
+    </definition>
+    <definition name=".successRegister" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Registration/success_Reg.jsp"/>
+    </definition>
+    <definition name=".SIdisplayMsg" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/SI/SIDisplayMsg.jsp"/>
+    </definition>
+    <definition name=".SIView" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/SI/SIView.jsp"/>
+    </definition>
+    <definition name=".SuccessPage" extends =".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Booking/SuccessSave_ebook.jsp"/>
+    </definition>
+    <definition name =".editBooking" extends =".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Booking/ebookingcrmnew.jsp"/>
+    </definition>
+    <definition name=".viewEbookingNew" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Booking/viewEbookingNew.jsp"/>
+    </definition>
+    <definition name=".SuccessPage" extends =".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Booking/SuccessSave_ebook.jsp"/>
+    </definition>
+    <definition name =".editamendmentbooking" extends =".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Booking/AmendmentBooking.jsp"/>
+    </definition>
+    <definition name=".BLSubmit" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/BL/BLEdit.jsp"/>
+    </definition>
+    <definition name=".BLView" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/BL/BLView.jsp"/>
+    </definition>
+    <definition name=".BLdisplayMsg" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/BL/BLDisplayMsg.jsp"/>
+    </definition>
+    <definition name=".oblbatchprint" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/BL/BLBatcPrint.jsp"/>
+    </definition>
+    <definition name=".resetPassword" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/PasswordReset/ecompasswordreset.jsp"/>
+    </definition>
+    <definition name=".viewcontact" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/ContactUs.jsp"/>
+    </definition>
+    <definition name=".bkgandappmt" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/BookingandAppointment.jsp"/>
+    </definition>
+    <definition name=".mailalert" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/MailAlert/MailAlert.jsp"/>
+    </definition>
+    <definition name=".forgot" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/Forgotten.jsp"/>
+    </definition>
+    <definition name=".vendor" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Agency/SpecialPrivilege.jsp"/>
+    </definition>
+    <definition name=".emailtemplate" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Agency/emailtemplate.jsp"/>
+    </definition>
+    <definition name=".resetadminpass" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/PasswordReset/ecomadminpasswordreset.jsp"/>
+    </definition>
+    <definition name=".successconfigscreen" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Cpanel/GlobalConfiguration.jsp"/>
+    </definition>
+    <definition name=".viewcutoffconfig" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Cpanel/CutoffConfiguration.jsp"/>
+    </definition>
+    <definition name=".successconfigscreen" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Cpanel/GlobalConfiguration.jsp"/>
+    </definition>
+    <definition name=".fieldconfig" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Agency/FieldConfiguration.jsp"/>
+    </definition>
+    <definition name=".srvcrestrictconfig" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Agency/ServiceRestriction.jsp"/>
+    </definition>
+    <definition name=".imageupload" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Agency/ImageUpload.jsp"/>
+    </definition>
+    <definition name=".customeradvisory" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Agency/CustomerAdvisory.jsp"/>
+    </definition>
+    <definition name=".dashboard" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/dashboard.jsp"/>
+    </definition>
+    <definition name=".globalConfig" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Cpanel/GlobalConfiguration.jsp"/>
+    </definition>
+    <definition name=".registerMenu" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Registration/RegisterMenu.jsp"/>
+    </definition>
+    <definition name=".usercreation" extends=".mainloginLayout_new">
+        <put name="title" value="/e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/UserCreation/UserCreation.jsp"/>
+    </definition>
+    <definition name=".rates" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Rates/RatesNew.jsp"/>
+    </definition>
+    <definition name=".newccrcuststmt" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Phase2/NewCustomerStatement.jsp"/>
+    </definition>
+    <definition name=".statsreport" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/StatsReport/StatsReport.jsp"/>
+    </definition>
+    <definition name=".cargoprotect" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/CargoProtect.jsp"/>
+    </definition>
+    <definition name=".faq" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/CargoProtectFAQ.jsp"/>
+    </definition>
+    <definition name=".MCNsummary" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/MCN/MCNSummary.jsp"/>
+    </definition>
+    <definition name=".MCNView" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/MCN/MCNView.jsp"/>
+    </definition>
+    <definition name=".MCNSubmit" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/MCN/MCNEdit.jsp"/>
+    </definition>
+    <definition name=".MCNDisplayMsg" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/MCN/MCNDisplayMsg.jsp"/>
+    </definition>
+    <definition name=".cargoprotectpdf" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Common/CargoProtectPDF.jsp"/>
+    </definition>
+    <definition name=".notice" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Notice/noticeSummary.jsp"/>
+    </definition>
+    <definition name=".customerPaymentHistory" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Payment/PaymentHistory.jsp"/>
+    </definition>
+    <definition name=".useranalytics" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/Agency/UserAnalytics.jsp"/>
+    </definition>
+    <definition name=".stripeSuccess" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/stripe/stripeSuccess.jsp"/>
+    </definition>
+    <definition name=".stripeCancel" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/stripe/stripeCancel.jsp"/>
+    </definition>
+    <definition name=".paymentHistory" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/stripe/PaymentHistory.jsp"/>
+    </definition>
+    <definition name=".ngeniusSuccess" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/ngenius/ngeniusSuccess.jsp"/>
+    </definition>
+    <definition name=".ngeniusCancel" extends=".mainloginLayout_new">
+        <put name="title" value="e-Commerce"/>
+        <put name="body" value="/WEB-INF/jsp/ngenius/ngeniusCancel.jsp"/>
+    </definition>
+</tiles-definitions>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Carbon API rolling log. System properties are set once at cache startup by
+  CarbonLogInitializer (ECOM_LOG_BASE_PATH, ECOM_CARBON_LOG_FILE_PATTERN, ECOM_CARBON_LOG_ROLLING_INTERVAL).
+
+  Do not use :-default values containing %d{...} inside ${sys:...} — the } in date patterns
+  terminates substitution early and produces a trailing "}" in rolled file names.
+-->
+<Configuration status="WARN" shutdownHook="disable">
+    <Properties>
+        <Property name="logBase">${sys:ECOM_LOG_BASE_PATH}</Property>
+        <Property name="logDir">${logBase}/carbonAPI</Property>
+        <Property name="rollPattern">${sys:ECOM_CARBON_LOG_FILE_PATTERN}</Property>
+        <Property name="rollInterval">${sys:ECOM_CARBON_LOG_ROLLING_INTERVAL}</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="CarbonRolling"
+                     fileName="${logDir}/carbon-api.log"
+                     filePattern="${logDir}/carbon-api.log.${rollPattern}"
+                     append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %m%n" charset="UTF-8"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="${rollInterval}" modulate="true"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="net.ecom.carbon.CarbonApi" level="info" additivity="false">
+            <AppenderRef ref="CarbonRolling"/>
+        </Logger>
+        <Root level="OFF"/>
+    </Loggers>
+</Configuration>
