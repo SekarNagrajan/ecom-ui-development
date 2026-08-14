@@ -1,0 +1,24 @@
+# Build output
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE files
+.settings/
+.classpath
+.project
+*.iml
+.idea/
+nbproject/private/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Generated report script
+generate_report.py
