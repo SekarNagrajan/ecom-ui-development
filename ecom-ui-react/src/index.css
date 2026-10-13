@@ -1,0 +1,54 @@
+@import '@fontsource/poppins/latin-300.css';
+@import '@fontsource/poppins/latin-400.css';
+@import '@fontsource/poppins/latin-500.css';
+@import '@fontsource/poppins/latin-600.css';
+@import '@fontsource/poppins/latin-800.css';
+@import 'tailwindcss';
+
+/* Design tokens taken from the Figma "Home" frame (19082026_ecom_design_v1, node 9:31). */
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: #e85d3b;
+  --color-navy: #0a1668;
+  --color-navy-deep: #0a1669;
+  --color-ink-muted: #787fac;
+  --color-ink-gray: #7f7f7f;
+  --color-accent-sky: #a5efff;
+  --color-surface-muted: #f2f3f7;
+
+  --breakpoint-3xl: 1920px;
+}
+
+/* Page shells: fixed design widths at 1920px, shrinking with a side gutter below that. */
+@utility shell-header {
+  width: min(1652px, calc(100% - 2 * var(--page-gutter)));
+  margin-inline: auto;
+}
+@utility shell-wide {
+  width: min(1650px, calc(100% - 2 * var(--page-gutter)));
+  margin-inline: auto;
+}
+@utility shell-narrow {
+  width: min(1260px, calc(100% - 2 * var(--page-gutter)));
+  margin-inline: auto;
+}
+
+@layer base {
+  :root {
+    --page-gutter: 16px;
+  }
+  @media (width >= 48rem) {
+    :root {
+      --page-gutter: 32px;
+    }
+  }
+  @media (width >= 80rem) {
+    :root {
+      --page-gutter: 48px;
+    }
+  }
+  body {
+    @apply bg-white font-sans text-black antialiased;
+  }
+}
